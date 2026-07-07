@@ -1,0 +1,8 @@
+{
+  "files": {
+    "raw_b1610_202606.json": {
+      "sha256": "6fc637c9ad3afb7880dacd414265b2eeac22ac36d3573946250b3a9d805e5f3f",
+      "description": "Frozen raw Elexon B1610 data for June 2026"
+    }
+  }
+}

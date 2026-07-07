@@ -1,0 +1,12 @@
+{
+  "claim_id": "UK-HARMONY-001",
+  "dataset_version": "June 2026 Telemetry v1",
+  "audit_version": "1.0",
+  "protocol_version": "P10 v1.1",
+  "verdict": "Verified with Limitations",
+  "confidence": "High",
+  "known_limitations_and_uncertainties": "Metered volumes have a 30-minute temporal resolution floor, preventing direct observation of instantaneous active power export. Maximum observed discharge (177.63 MWh) is limited by Tesla Autobidder market dispatch rather than physical capability, meaning the full 196 MWh energy capacity cannot be fully confirmed nor refuted by June 2026 data alone. Direct verification of the physical capacity limit requires State-of-Charge (SoC) telemetry or a wider audit window (6-12 months) containing full physical test cycles.",
+  "metrics_sha256": "589637b29f2253ceed1de7734e2f48be394cd9ebecad85b81756e8422c205cf8",
+  "reviewer": "Ivan Nestorov",
+  "date": "2026-07-07"
+}

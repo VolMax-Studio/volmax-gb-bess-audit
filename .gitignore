@@ -1,0 +1,16 @@
+# Local environment variables
+.env
+.env.local
+
+# Python caches and build files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+
+# Scratch files
+scratch/
+

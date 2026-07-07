@@ -1,0 +1,108 @@
+{
+  "audit_period": "June 2026",
+  "assets": {
+    "E_PILLB-1": {
+      "name": "Pillswood 1 Battery Storage",
+      "capacity_mw": 49.9,
+      "total_charge_mwh": 3894.22,
+      "total_discharge_mwh": 3470.09,
+      "ac_ac_rte": 0.8911,
+      "records_count": 1294
+    },
+    "E_PILLB-2": {
+      "name": "Pillswood 2 Battery Storage",
+      "capacity_mw": 49.9,
+      "total_charge_mwh": 3892.23,
+      "total_discharge_mwh": 3441.56,
+      "ac_ac_rte": 0.8842,
+      "records_count": 1294
+    },
+    "combined": {
+      "capacity_mw": 99.8,
+      "total_charge_mwh": 7786.45,
+      "total_discharge_mwh": 6911.65,
+      "ac_ac_rte": 0.8877,
+      "capacity_factor_pct": 9.8,
+      "daily_cycles": 1.175
+    }
+  },
+  "analytical_results": {
+    "max_observed_combined_export_power_mw": 97.65,
+    "max_observed_combined_import_power_mw": 98.21,
+    "max_continuous_discharge_block": {
+      "block_index": 133,
+      "total_energy_mwh": 177.63,
+      "duration_hours": 7.5,
+      "start": "2026-06-20 SP33",
+      "end": "2026-06-20 SP47",
+      "avg_power_mw": 23.68
+    },
+    "utilization_histogram": {
+      "hours": {
+        "0-10_mw": 125.5,
+        "10-30_mw": 75.5,
+        "30-60_mw": 64.0,
+        "60-90_mw": 19.5,
+        "90+_mw": 6.0
+      },
+      "percentages": {
+        "0-10_mw": 43.2,
+        "10-30_mw": 25.99,
+        "30-60_mw": 22.03,
+        "60-90_mw": 6.71,
+        "90+_mw": 2.07
+      }
+    },
+    "dispatch_duration_curve_percentiles": {
+      "max_100pct_mw": 97.65,
+      "p90_mw": 57.64,
+      "p75_mw": 38.55,
+      "p50_median_mw": 14.49,
+      "p25_mw": 3.79,
+      "p10_mw": 0.75,
+      "min_mw": 0.0
+    },
+    "top_5_discharge_blocks": [
+      {
+        "block_index": 133,
+        "total_energy_mwh": 177.63,
+        "duration_hours": 7.5,
+        "start": "2026-06-20 SP33",
+        "end": "2026-06-20 SP47",
+        "avg_power_mw": 23.68
+      },
+      {
+        "block_index": 138,
+        "total_energy_mwh": 169.8,
+        "duration_hours": 4.5,
+        "start": "2026-06-21 SP37",
+        "end": "2026-06-21 SP45",
+        "avg_power_mw": 37.73
+      },
+      {
+        "block_index": 46,
+        "total_energy_mwh": 167.16,
+        "duration_hours": 4.0,
+        "start": "2026-06-07 SP35",
+        "end": "2026-06-07 SP42",
+        "avg_power_mw": 41.79
+      },
+      {
+        "block_index": 185,
+        "total_energy_mwh": 165.94,
+        "duration_hours": 3.0,
+        "start": "2026-06-28 SP36",
+        "end": "2026-06-28 SP41",
+        "avg_power_mw": 55.31
+      },
+      {
+        "block_index": 25,
+        "total_energy_mwh": 164.33,
+        "duration_hours": 3.0,
+        "start": "2026-06-04 SP16",
+        "end": "2026-06-04 SP21",
+        "avg_power_mw": 54.78
+      }
+    ]
+  }
+}
