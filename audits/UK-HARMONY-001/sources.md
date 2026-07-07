@@ -5,6 +5,8 @@ Verifiable public anchors and snapshots establishing the admissibility of the da
 *   **Pillswood BESS Claim Source:**
     *   *Live Link:* [Harmony Energy - Pillswood BESS](https://www.harmonyenergy.co.uk/pillswood-bess/)
     *   *Archive Snapshot:* [web.archive.org/web/20260707142812/https://www.harmonyenergy.co.uk/pillswood/](https://web.archive.org/web/20260707142812/https://www.harmonyenergy.co.uk/pillswood/)
+    *   *Local Evidence Snapshot:*
+        ![Pillswood BESS Official Nameplate Capacity Claim (98 MW / 196 MWh)](evidence_claim.png)
 *   **Elexon Insights Portal (BMRS Telemetry Source):**
     *   *Live Link:* [Elexon Insights Portal](https://insights.elexon.co.uk/)
     *   *Archive Snapshot:* [web.archive.org/web/20260707142510/https://insights.elexon.co.uk/](https://web.archive.org/web/20260707142510/https://insights.elexon.co.uk/)
