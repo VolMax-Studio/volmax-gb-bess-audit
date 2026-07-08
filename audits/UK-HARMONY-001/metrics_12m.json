@@ -1,0 +1,219 @@
+{
+  "audit_period": "12-Month (July 2025 - June 2026)",
+  "unseen_11m_window": {
+    "num_days": 335,
+    "total_charge_mwh": 77646.88,
+    "total_discharge_mwh": 67169.07,
+    "ac_ac_rte": 0.8651,
+    "capacity_factor_pct": 8.52,
+    "daily_cycles": 1.023,
+    "max_observed_combined_export_power_mw": 97.78,
+    "max_observed_combined_import_power_mw": 98.21,
+    "max_continuous_discharge_block": {
+      "block_index": 1858,
+      "total_energy_mwh": 183.67,
+      "duration_hours": 4.5,
+      "start": "2026-03-31 SP33",
+      "end": "2026-03-31 SP41",
+      "avg_power_mw": 40.82
+    },
+    "assets": {
+      "E_PILLB-1": {
+        "total_charge_mwh": 39737.7,
+        "total_discharge_mwh": 34430.15,
+        "ac_ac_rte": 0.8664
+      },
+      "E_PILLB-2": {
+        "total_charge_mwh": 37909.18,
+        "total_discharge_mwh": 32738.92,
+        "ac_ac_rte": 0.8636
+      }
+    },
+    "top_5_discharge_blocks": [
+      {
+        "block_index": 1858,
+        "total_energy_mwh": 183.67,
+        "duration_hours": 4.5,
+        "start": "2026-03-31 SP33",
+        "end": "2026-03-31 SP41",
+        "avg_power_mw": 40.82
+      },
+      {
+        "block_index": 437,
+        "total_energy_mwh": 183.41,
+        "duration_hours": 6.5,
+        "start": "2025-09-03 SP33",
+        "end": "2025-09-03 SP45",
+        "avg_power_mw": 28.22
+      },
+      {
+        "block_index": 2203,
+        "total_energy_mwh": 181.89,
+        "duration_hours": 3.0,
+        "start": "2026-05-30 SP39",
+        "end": "2026-05-30 SP44",
+        "avg_power_mw": 60.63
+      },
+      {
+        "block_index": 1822,
+        "total_energy_mwh": 180.73,
+        "duration_hours": 4.5,
+        "start": "2026-03-25 SP35",
+        "end": "2026-03-25 SP43",
+        "avg_power_mw": 40.16
+      },
+      {
+        "block_index": 2091,
+        "total_energy_mwh": 180.5,
+        "duration_hours": 3.0,
+        "start": "2026-05-09 SP37",
+        "end": "2026-05-09 SP42",
+        "avg_power_mw": 60.17
+      }
+    ]
+  },
+  "scoped_1m_window": {
+    "num_days": 29,
+    "total_charge_mwh": 8348.45,
+    "total_discharge_mwh": 7288.54,
+    "ac_ac_rte": 0.873,
+    "capacity_factor_pct": 10.69,
+    "daily_cycles": 1.282,
+    "max_observed_combined_export_power_mw": 97.65,
+    "max_observed_combined_import_power_mw": 98.21,
+    "max_continuous_discharge_block": {
+      "block_index": 190,
+      "total_energy_mwh": 177.9,
+      "duration_hours": 3.5,
+      "start": "2026-06-29 SP37",
+      "end": "2026-06-29 SP43",
+      "avg_power_mw": 50.83
+    },
+    "assets": {
+      "E_PILLB-1": {
+        "total_charge_mwh": 4158.03,
+        "total_discharge_mwh": 3642.98,
+        "ac_ac_rte": 0.8761
+      },
+      "E_PILLB-2": {
+        "total_charge_mwh": 4190.42,
+        "total_discharge_mwh": 3645.56,
+        "ac_ac_rte": 0.87
+      }
+    },
+    "top_5_discharge_blocks": [
+      {
+        "block_index": 190,
+        "total_energy_mwh": 177.9,
+        "duration_hours": 3.5,
+        "start": "2026-06-29 SP37",
+        "end": "2026-06-29 SP43",
+        "avg_power_mw": 50.83
+      },
+      {
+        "block_index": 133,
+        "total_energy_mwh": 177.63,
+        "duration_hours": 7.5,
+        "start": "2026-06-20 SP33",
+        "end": "2026-06-20 SP47",
+        "avg_power_mw": 23.68
+      },
+      {
+        "block_index": 138,
+        "total_energy_mwh": 169.8,
+        "duration_hours": 4.5,
+        "start": "2026-06-21 SP37",
+        "end": "2026-06-21 SP45",
+        "avg_power_mw": 37.73
+      },
+      {
+        "block_index": 46,
+        "total_energy_mwh": 167.16,
+        "duration_hours": 4.0,
+        "start": "2026-06-07 SP35",
+        "end": "2026-06-07 SP42",
+        "avg_power_mw": 41.79
+      },
+      {
+        "block_index": 185,
+        "total_energy_mwh": 165.94,
+        "duration_hours": 3.0,
+        "start": "2026-06-28 SP36",
+        "end": "2026-06-28 SP41",
+        "avg_power_mw": 55.31
+      }
+    ]
+  },
+  "combined_12m_window": {
+    "num_days": 364,
+    "total_charge_mwh": 85995.33,
+    "total_discharge_mwh": 74457.62,
+    "ac_ac_rte": 0.8658,
+    "capacity_factor_pct": 8.7,
+    "daily_cycles": 1.044,
+    "max_observed_combined_export_power_mw": 97.78,
+    "max_observed_combined_import_power_mw": 98.21,
+    "max_continuous_discharge_block": {
+      "block_index": 1858,
+      "total_energy_mwh": 183.67,
+      "duration_hours": 4.5,
+      "start": "2026-03-31 SP33",
+      "end": "2026-03-31 SP41",
+      "avg_power_mw": 40.82
+    },
+    "assets": {
+      "E_PILLB-1": {
+        "total_charge_mwh": 43895.73,
+        "total_discharge_mwh": 38073.13,
+        "ac_ac_rte": 0.8674
+      },
+      "E_PILLB-2": {
+        "total_charge_mwh": 42099.6,
+        "total_discharge_mwh": 36384.48,
+        "ac_ac_rte": 0.8642
+      }
+    },
+    "top_5_discharge_blocks": [
+      {
+        "block_index": 1858,
+        "total_energy_mwh": 183.67,
+        "duration_hours": 4.5,
+        "start": "2026-03-31 SP33",
+        "end": "2026-03-31 SP41",
+        "avg_power_mw": 40.82
+      },
+      {
+        "block_index": 437,
+        "total_energy_mwh": 183.41,
+        "duration_hours": 6.5,
+        "start": "2025-09-03 SP33",
+        "end": "2025-09-03 SP45",
+        "avg_power_mw": 28.22
+      },
+      {
+        "block_index": 2203,
+        "total_energy_mwh": 181.89,
+        "duration_hours": 3.0,
+        "start": "2026-05-30 SP39",
+        "end": "2026-05-30 SP44",
+        "avg_power_mw": 60.63
+      },
+      {
+        "block_index": 1822,
+        "total_energy_mwh": 180.73,
+        "duration_hours": 4.5,
+        "start": "2026-03-25 SP35",
+        "end": "2026-03-25 SP43",
+        "avg_power_mw": 40.16
+      },
+      {
+        "block_index": 2091,
+        "total_energy_mwh": 180.5,
+        "duration_hours": 3.0,
+        "start": "2026-05-09 SP37",
+        "end": "2026-05-09 SP42",
+        "avg_power_mw": 60.17
+      }
+    ]
+  }
+}

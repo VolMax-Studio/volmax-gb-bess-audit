@@ -3,6 +3,10 @@
     "raw_b1610_202606.json": {
       "sha256": "6fc637c9ad3afb7880dacd414265b2eeac22ac36d3573946250b3a9d805e5f3f",
       "description": "Frozen raw Elexon B1610 data for June 2026"
+    },
+    "raw_pillswood_12m.json": {
+      "sha256": "10ad081e07770e21ed2ed8a0293270617803c365a6446599ccfd9f4c2dd288d2",
+      "description": "Frozen raw Elexon B1610 telemetry for Pillswood 1 & 2 (July 2025 - June 2026)"
     }
   }
 }

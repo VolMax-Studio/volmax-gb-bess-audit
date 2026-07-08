@@ -1,0 +1,14 @@
+[
+  {
+    "elexonBmUnit": "E_PILLB-1",
+    "bmUnitName": "Pillswood 1 Battery Storage",
+    "generationCapacity": 49.9,
+    "demandCapacity": 49.9
+  },
+  {
+    "elexonBmUnit": "E_PILLB-2",
+    "bmUnitName": "Pillswood 2 Battery Storage",
+    "generationCapacity": 49.9,
+    "demandCapacity": 49.9
+  }
+]
