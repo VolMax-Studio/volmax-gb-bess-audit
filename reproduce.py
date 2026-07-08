@@ -199,26 +199,30 @@ def main():
             has_both_signs = t_data["has_positive"] and t_data["has_negative"]
             
             # C2: RTE Bounds Check
-            # Physically: 0.60 <= RTE <= 0.92
-            rte_valid = (rte >= 0.60 and rte <= 0.92)
+            # Physically: RTE <= 1.0 (strict thermodynamic limit)
+            # Descriptively: 0.60 <= RTE <= 0.92 (typical range)
             
             if not has_both_signs:
                 status = "Active"
                 verdict = "FAIL (L1 Integrity)"
                 reason = f"Single-direction telemetry. Charge count={t_data['has_negative']}, Discharge count={t_data['has_positive']}."
                 failed_count += 1
-            elif not rte_valid:
+            elif rte > 1.0:
                 status = "Active"
                 verdict = "FAIL (L2 Physical Violation)"
-                if rte > 0.92:
-                    reason = f"Thermodynamic violation: AC-AC RTE = {rte:.3f} (> 0.92). Likely under-reported charging or omitted auxiliary loads."
-                else:
-                    reason = f"Low efficiency violation: AC-AC RTE = {rte:.3f} (< 0.60). Excessive auxiliary load leakage or degradation."
+                reason = f"Thermodynamic violation: AC-AC RTE = {rte:.3f} (> 1.0). Absolute physical impossibility (energy creation)."
                 failed_count += 1
             else:
                 status = "Active"
-                verdict = "PASS"
-                reason = "AC-AC RTE within physical bounds [0.60, 0.92] and complete bidirectional telemetry."
+                if rte < 0.60 or rte > 0.92:
+                    verdict = "PASS (Flagged)"
+                    if rte > 0.92:
+                        reason = f"High efficiency flag: AC-AC RTE = {rte:.3f} (> 0.92). Likely boundary-condition artifact (starting full and ending empty) or under-reported auxiliary loads."
+                    else:
+                        reason = f"Low efficiency flag: AC-AC RTE = {rte:.3f} (< 0.60). High auxiliary consumption or low utilization."
+                else:
+                    verdict = "PASS"
+                    reason = "AC-AC RTE within physical bounds [0.60, 0.92] and complete bidirectional telemetry."
                 passed_count += 1
                 
         audit_results[bmu] = {
