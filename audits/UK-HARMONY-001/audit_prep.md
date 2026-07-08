@@ -47,14 +47,19 @@ To evaluate the verbatim claim of **98 MW power capacity** and **196 MWh energy 
 
 ---
 
-## 4. A-Priori Falsification Rules
+## 4. A-Priori Falsification & Verification Rules
 
-Before executing any analytical script, we define the strict boundaries that would refute or limit the claims:
+These rules are formally pre-registered and fixed after the scoping of June 2026 data, but prior to the acquisition and analysis of the remaining 11-month window (July 2025 – May 2026).
 
-### Rule A: Active Power Falsification
-1.  **Refutation Boundary:** If the combined metered volume in any single settlement period exceeds the physical registry limit of $99.8\text{ MW} \times 0.5\text{ h} = 49.9\text{ MWh}$ by more than a 5% measurement tolerance ($> 52.4\text{ MWh}$), the dataset contains a critical telemetry sign or scale error, refuting L1 Data Integrity.
-2.  **Verification Boundary:** If the combined average power sustained over any 30-minute settlement period is $\ge 98\text{ MW} \times 0.95 = 93.1\text{ MW}$, the power capacity claim is verified.
+### Rule A: Active Power Verification Grammar
+The active power capacity claim ($P_{\text{claim}} = 98\text{ MW}$) is evaluated using the following classification grammar:
+1.  **Demonstrated**: Verified if the combined average power sustained over any 30-minute settlement period is $\ge 98\text{ MW} \times 0.95 = 93.1\text{ MW}$.
+2.  **Bounded**: Classified as bounded if the maximum combined average power sustained over any 30-minute settlement period is $P_{\text{max}} < 93.1\text{ MW}$, indicating that the full capacity was not fully dispatched or required by market conditions in the window.
+3.  **Not Exercised**: Classified as not exercised in the window if no active export is recorded.
+4.  *Physical/Data Violations*: If the combined metered volume in any single settlement period exceeds the physical grid connection limit of $99.8\text{ MW} \times 0.5\text{ h} = 49.9\text{ MWh}$ by more than a 5% measurement tolerance ($> 52.4\text{ MWh}$), this opens an L2 physical anomaly (data/telemetry error) rather than refuting the capacity claim itself.
 
-### Rule B: Energy Capacity Falsification
-1.  **Refutation Boundary:** If we observe a continuous discharge block (a contiguous sequence of settlement periods with positive metered volumes and no charging periods) that terminates due to physical depletion (indicated by subsequent zero or near-zero export) and yields significantly less than 196 MWh (e.g. $< 180\text{ MWh}$), the capacity claim is **refuted**.
-2.  **Neutral Observation Boundary:** BESS systems are commercially operated under Autobidder to maximize revenue, not to run physical capacity tests. Therefore, if the maximum continuous discharge block observed in the 30-day dataset is less than 196 MWh (e.g. 158 MWh) but does *not* terminate due to BESS depletion (i.e. the discharge is terminated by market prices or instructions, leaving the BESS with residual charge), the nominal capacity cannot be refuted. The verdict in this case must be **Verified with Limitations**, noting that the physical capacity limit is bounded by market dispatch and recommending a wider audit window (6-12 months).
+### Rule B: Energy Capacity Verification Grammar
+The energy storage capacity claim ($E_{\text{claim}} = 196\text{ MWh}$) is evaluated using the following classification grammar:
+1.  **Demonstrated**: Verified if a continuous discharge block (a contiguous sequence of settlement periods with positive metered volumes and no charging periods) yields $\ge 196\text{ MWh} \times 0.95 = 186.2\text{ MWh}$ at the AC connection boundary.
+2.  **Bounded**: Classified as bounded by the observation window and market dispatch if the maximum continuous discharge block observed is $E_{\text{max}} < 186.2\text{ MWh}$. Because State-of-Charge (SoC) telemetry is not available in public Elexon B1610 data (meaning zero import does not prove the battery was full, and zero export does not prove it was empty), shorter cycles cannot physically refute the nominal storage capacity. Instead, $E_{\text{max}}$ is a descriptive lower bound on the exercised capacity under commercial market dispatch, yielding a verdict of "Verified with Limitations".
+3.  **Not Exercised**: Classified as not exercised if no significant discharge blocks are observed.
