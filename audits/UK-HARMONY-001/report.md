@@ -56,7 +56,7 @@ The audit progressed through the five ordered levels of the P10 protocol:
 | Level | Status | Reason |
 | :--- | :--- | :--- |
 | **L0 Admissibility** | **PASS** | Claim is testable; ground-truth anchor is independent and has an open BMRS license. |
-| **L1 Data Integrity** | **PASS (one gap)** | Telemetry dataset matches SHA-256 hash in `data_manifest.json`. One 24-hour gap is documented on 2026-06-27; the cause is not determinable from the dataset. |
+| **L1 Data Integrity** | **PASS (documented gaps)** | Telemetry dataset matches SHA-256 hash in `data_manifest.json`. Gaps are fully documented: one 24-hour gap on 2026-06-27 (cause not determinable) and 4 records on 2025-07-01 SP 1–2 (due to timezone query boundary). |
 | **L2 Physics Compliance** | **PASS** | AC-to-AC Round-Trip Efficiency (RTE) is bounded by thermodynamic limits: 86.51% (unseen window) and 87.30% (scoped window), which are within standard physical bounds. |
 | **L3 Statistical Integrity**| **PASS** | Rules were frozen *before* data acquisition of the 11-month unseen window. Data leakage and retrofitting are prevented. |
 | **L4 Reproducibility** | **PASS** | All findings regenerate deterministically using the `scratch/audit_pillswood_12m.py` script. |
@@ -82,7 +82,7 @@ The quantitative verification of the dataset yielded the following asset-level m
 | **Capacity Factor (CF)** | **8.52%** | **10.69%** | **8.70%** |
 | **Daily Cycles** | **1.023 cycles/day** | **1.282 cycles/day** | **1.044 cycles/day** |
 
-*Note: Operating Days are defined as the number of unique calendar days containing at least one non-zero telemetry record (charge or discharge) in the dataset. The single missing day (364 vs 365 days; 29 vs 30 days in June) represents a 24-hour telemetry gap on 2026-06-27; the cause is not determinable from the dataset.*
+*Note: Operating Days are defined as the number of unique calendar days containing at least one non-zero telemetry record (charge or discharge) in the dataset. Out of 365 calendar days in the audit year, 364 days contain records. Gaps in the 35,040 expected records (yielding 34,940 actual records) are: (1) 96 records on 2026-06-27 (24h gap; cause not determinable from the dataset), and (2) 4 records on 2025-07-01 SP 1–2 (timezone query boundary artifact from BST UTC+1 query initialization).*
 
 ### B. Sub-Claim A: Active Power Capacity (98 MW Export)
 *   **Pre-registered Target Threshold:** $\ge 98.0\text{ MW}$ export.
