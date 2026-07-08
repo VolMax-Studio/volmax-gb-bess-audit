@@ -1,0 +1,23 @@
+{
+  "title": "Great Britain BESS Fleet Data-Integrity Screening and Pillswood Grid-Dispatch Capacity Audit",
+  "description": "Level 1 data integrity and Level 2 physics compliance screening for the Great Britain BESS fleet, and a deep-dive 12-month grid-dispatch capacity audit for Pillswood BESS (E_PILLB-1 & E_PILLB-2) under the VolMax P10 Verification Protocol. The audit uses 30-minute metered volumes from Elexon B1610 telemetry to evaluate active power capacity (98 MW claim) and energy capacity (196 MWh claim) split across a pre-registered unseen window (July 2025 - May 2026) and a scoped window (June 2026).",
+  "creators": [
+    {
+      "name": "Nestorov, Ivan",
+      "affiliation": "VolMax Studio Lab",
+      "orcid": "0009-0006-7940-9539"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "Elexon BMRS",
+    "BESS",
+    "Great Britain",
+    "Pillswood Battery Storage",
+    "Grid Dispatch",
+    "Capacity Audit",
+    "VolMax P10 Protocol"
+  ],
+  "notes": "Final verdicts for UK-HARMONY-001 (Pillswood BESS): Active Power Capacity (98 MW): Verified with Limitations (Bounded); Energy Storage Capacity (196 MWh): Verified with Limitations (Bounded). Rules pre-registered in commit d6458e53995f32d3989c98ef2e3cf3426e2e5052."
+}
