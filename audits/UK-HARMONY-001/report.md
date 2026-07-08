@@ -1,5 +1,5 @@
 # P10 Verification Report: Pillswood BESS Grid-Dispatch Audit
-### Report ID: `VM-2026-0002` | Protocol Version: `P10 v1.1`
+### Report ID: `VM-2026-0002` | Protocol Version: `P10 v1.0`
 **Claim ID:** `UK-HARMONY-001` (Pillswood Battery Storage)
 
 ```yaml
@@ -56,8 +56,8 @@ The audit progressed through the five ordered levels of the P10 protocol:
 | Level | Status | Reason |
 | :--- | :--- | :--- |
 | **L0 Admissibility** | **PASS** | Claim is testable; ground-truth anchor is independent and has an open BMRS license. |
-| **L1 Data Integrity** | **PASS** | Telemetry dataset matches SHA-256 hash in `data_manifest.json`. No missing values or timing drift. |
-| **L2 Physics Compliance** | **PASS** | AC-to-AC Round-Trip Efficiency (RTE) is bounded by thermodynamic limits: 86.51% (unseen window) and 87.30% (scoped window), representing consistent, valid performance. |
+| **L1 Data Integrity** | **PASS (one gap)** | Telemetry dataset matches SHA-256 hash in `data_manifest.json`. One 24-hour gap is documented on 2026-06-27; the cause is not determinable from the dataset. |
+| **L2 Physics Compliance** | **PASS** | AC-to-AC Round-Trip Efficiency (RTE) is bounded by thermodynamic limits: 86.51% (unseen window) and 87.30% (scoped window), which are within standard physical bounds. |
 | **L3 Statistical Integrity**| **PASS** | Rules were frozen *before* data acquisition of the 11-month unseen window. Data leakage and retrofitting are prevented. |
 | **L4 Reproducibility** | **PASS** | All findings regenerate deterministically using the `scratch/audit_pillswood_12m.py` script. |
 | **L5 Final Verdict** | **Verified with Limitations** | Active power capability (98 MW) verified as **Bounded** at 97.78 MW. Energy capacity (196 MWh) is **Bounded** at 183.67 MWh; lack of SoC data prevents physical refutation. |
@@ -82,7 +82,7 @@ The quantitative verification of the dataset yielded the following asset-level m
 | **Capacity Factor (CF)** | **8.52%** | **10.69%** | **8.70%** |
 | **Daily Cycles** | **1.023 cycles/day** | **1.282 cycles/day** | **1.044 cycles/day** |
 
-*Note: Operating Days are defined as the number of unique calendar days containing at least one non-zero telemetry record (charge or discharge) in the dataset. The single missing day (364 vs 365) represents a 24-hour network telemetry dropout on the BMRS stream.*
+*Note: Operating Days are defined as the number of unique calendar days containing at least one non-zero telemetry record (charge or discharge) in the dataset. The single missing day (364 vs 365 days; 29 vs 30 days in June) represents a 24-hour telemetry gap on 2026-06-27; the cause is not determinable from the dataset.*
 
 ### B. Sub-Claim A: Active Power Capacity (98 MW Export)
 *   **Pre-registered Target Threshold:** $\ge 98.0\text{ MW}$ export.
@@ -119,11 +119,11 @@ The initial June 2026 scoping (run against the Initial Image / II settlement dat
 The verdict is qualified by the following structured limitations, in accordance with the P10 Caveat Theorem:
 
 1.  **Temporal Resolution Floor:** Because B1610 telemetry is reported in half-hourly intervals, instantaneous sub-period spikes or transient grid-service delivery (e.g. sub-second frequency containment) cannot be verified. All active power ratings are testable only as 30-minute averages.
-2.  **Market-Driven Dispatch Constraint:** BESS dispatch is optimized by Tesla Autobidder to maximize wholesale arbitrage and ancillary services revenue. It is not operated as a continuous physical capacity test. The maximum continuous discharge block of 183.67 MWh represents the maximum dispatched energy, not necessarily the physical boundary of the cells.
+2.  **Market-Driven Dispatch Constraint:** BESS dispatch is optimized by market-driven dispatch (the operator's published case study attributes trading to Tesla Autobidder — see sources; not verifiable from B1610). It is not operated as a continuous physical capacity test. The maximum continuous discharge block of 183.67 MWh represents the maximum dispatched energy, not necessarily the physical boundary of the cells.
 3.  **Energy Capacity Confirmation Gap:** The maximum observed discharge (183.67 MWh) represents 93.7% of the nominal 196 MWh claim. The discharge block terminated and was immediately followed by charging. This behavior is consistent with either market-driven dispatch optimization or depletion of the available state of charge. Public telemetry does not allow these explanations to be distinguished. Therefore, the dataset alone is sufficient to establish a lower bound of 183.67 MWh but cannot confirm nor refute the physical 196 MWh limit.
 4.  **AC-to-AC RTE Boundary Caveat:** The annual AC-to-AC RTE of 86.58% is calculated over the entire 12-month window. Because State-of-Charge (SoC) telemetry is unobservable in B1610 data, we cannot perform initial/final state matching (state closing) on the battery capacity. The theoretical error bound introduced by this starting/ending SoC mismatch on the calculated RTE is given by the formula:
     $$\text{RTE Error Bound} = \pm \frac{E_{\text{cap}}}{C_{\text{total}}}$$
-    Where $E_{\text{cap}} = 196\text{ MWh}$ is the maximum capacity of the BESS, and $C_{\text{total}}$ is the total charge throughput. For the unseen 11-month window ($C_{\text{total}} = 77,646.88\text{ MWh}$), this yields an error bound of $\pm 0.25$ percentage points. For the full 12-month window ($C_{\text{total}} = 85,995.33\text{ MWh}$), the error bound is $\pm 0.23$ percentage points. This indicates that the mismatch has a negligible impact on the calculated RTE over long windows, making it a highly accurate descriptive representation of thermodynamic efficiency, though not a contract-compliance verdict carrier.
+    Where $E_{\text{cap}} = 196\text{ MWh}$ is the maximum capacity of the BESS, and $C_{\text{total}}$ is the total charge throughput. For the unseen 11-month window ($C_{\text{total}} = 77,646.88\text{ MWh}$), this yields an error bound of $\pm 0.25$ percentage points. For the full 12-month window ($C_{\text{total}} = 85,995.33\text{ MWh}$), the error bound is $\pm 0.23$ percentage points. This indicates that the mismatch has a negligible impact on the calculated RTE over long windows, making it a stable descriptive metric of thermodynamic efficiency, though not a contract-compliance verdict carrier.
 
 ---
 

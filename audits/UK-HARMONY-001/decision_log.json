@@ -2,10 +2,10 @@
   "claim_id": "UK-HARMONY-001",
   "dataset_version": "12-Month Telemetry (July 2025 - June 2026)",
   "audit_version": "1.1",
-  "protocol_version": "P10 v1.1",
+  "protocol_version": "P10 v1.0",
   "verdict": "Verified with Limitations (Active Power bounded, Energy Capacity bounded)",
   "confidence": "High",
-  "known_limitations_and_uncertainties": "Metered volumes have a 30-minute temporal resolution floor, preventing direct observation of instantaneous active power export. Maximum observed discharge (183.67 MWh in the unseen window) is limited by Tesla Autobidder market dispatch rather than physical capability, meaning the full 196 MWh energy capacity cannot be fully confirmed nor refuted by public telemetry alone. Direct verification of the physical capacity limit requires State-of-Charge (SoC) telemetry or direct physical capacity testing. Rules were pre-registered and frozen in commit d6458e53995f32d3989c98ef2e3cf3426e2e5052 prior to pulling the unseen telemetry.",
+  "known_limitations_and_uncertainties": "Metered volumes have a 30-minute temporal resolution floor, preventing direct observation of instantaneous active power export. Maximum observed discharge (183.67 MWh in the unseen window) is limited by market-driven dispatch (the operator's published case study attributes trading to Tesla Autobidder; not verifiable from B1610), meaning the full 196 MWh energy capacity cannot be fully confirmed nor refuted by public telemetry alone. Direct verification of the physical capacity limit requires State-of-Charge (SoC) telemetry or direct physical capacity testing. Rules were pre-registered and frozen in commit d6458e53995f32d3989c98ef2e3cf3426e2e5052 prior to pulling the unseen telemetry.",
   "metrics_sha256": "b3958982001b1fb9f3594559a657177a1bf6e7a8079b296cbced68d018c0513a",
   "reviewer": "Ivan Nestorov",
   "date": "2026-07-08"
