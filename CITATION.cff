@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this verification audit package or dataset, please cite it as below."
+authors:
+  - family-names: "Nestorov"
+    given-names: "Ivan"
+    orcid: "https://orcid.org/0009-0006-7940-9539"
+    affiliation: "VolMax Studio Lab"
+title: "Great Britain BESS Fleet Data-Integrity Screening and Pillswood Grid-Dispatch Capacity Audit (VM-2026-0002)"
+version: "2.3"
+date-released: "2026-08-13"
+url: "https://github.com/VolMax-Studio/volmax-gb-bess-audit"
+repository-code: "https://github.com/VolMax-Studio/volmax-gb-bess-audit"
+license: "CC-BY-4.0"
+keywords:
+  - "Elexon BMRS"
+  - "BESS"
+  - "Great Britain"
+  - "Pillswood Battery Storage"
+  - "Grid Dispatch"
+  - "Capacity Audit"
+  - "VolMax P10 Protocol"

@@ -1,0 +1,55 @@
+# P10 Audit Package Layered Licensing Notice (UK-HARMONY-001)
+
+This audit package (`audits/UK-HARMONY-001/`) contains code, analytical report artifacts, derived figures, and raw third-party telemetry data governed by distinct, layered open licenses.
+
+---
+
+## 1. Scope of License Grants
+
+To prevent ambiguity regarding third-party data ownership, image rights, and software usage conditions:
+
+1. **Analytical Reports, Findings, & Derived Figures (CC BY 4.0):**
+   All analytical text, findings, derived metrics, report artifacts, and generated charts (`report.md`, `audit_prep.md`, `sources.md`, `versions.md`, `metrics_12m.json`, `metrics.json`, `decision_log.json`, `pillswood_discharge_block.png`) are licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. The verbatim legal code of CC BY 4.0 is contained in the accompanying `LICENSE` file.
+
+2. **Code & Verification Pipeline (MIT License):**
+   All software scripts and reproduction code (`reproduce.py`) are licensed under the **MIT License** (see Section 2 below).
+
+3. **Third-Party Telemetry Data & Third-Party Screenshots (Licence Exclusion):**
+   - **Raw Telemetry Data (`raw_pillswood_12m.json`):** Sourced from Elexon Insights Solution (BMRS) and distributed under the **Elexon BSC Public Data Licence** (see Section 3 below). **Third-party raw data is explicitly excluded from VolMax's CC BY 4.0 licence grant.** VolMax Studio Lab does not relicense the market operator's disclosures.
+   - **Third-Party Claim Screenshot (`evidence_claim.png`):** Screenshot of Harmony Energy's website case study included solely for claim evidence citation under fair dealing / quotation rules. **Third-party website screenshots are explicitly excluded from VolMax's CC BY 4.0 licence grant.**
+
+---
+
+## 2. Code & Verification Pipeline (MIT License)
+
+Copyright (c) 2026 Ivan Nestorov, VolMax Studio Lab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 3. Raw Telemetry Data (Elexon BSC Public Data Licence)
+
+Contains BSC information that is available from Elexon at no charge and which is licensed under the Elexon Public Data Licence.
+
+### Verbatim Official License Template Text:
+> "Elexon Limited hereby grants You a worldwide, royalty-free, perpetual, non-exclusive licence to Use the BMRS Data subject to the conditions below. You are free to: copy, publish, distribute and transmit the BMRS Data; adapt the BMRS Data; exploit the BMRS Data commercially and non-commercially for example, by combining it with other information, or by including it in your own product or application. Conditions: You must: acknowledge the source of the BMRS Data by including the following attribution statement and any safety information: 'Contains BMRS data © Elexon Limited copyright and database right [year]'; ensure that you do not use the BMRS Data in a way that suggests any official status or that Elexon endorses you or your use of the BMRS Data; ensure that you do not mislead others or misrepresent the BMRS Data or its source; ensure that your use of the BMRS Data does not breach the Data Protection Act 2018 or the Privacy and Electronic Communications (EC Directive) Regulations 2003."
+
+### Applied Mandatory Attribution Statement (2025–2026):
+> *"Contains BMRS data © Elexon Limited copyright and database right 2025–2026"*
