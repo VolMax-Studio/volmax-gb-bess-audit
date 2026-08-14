@@ -5,8 +5,8 @@ Verifiable public anchors and snapshots establishing the admissibility of the da
 *   **Pillswood BESS Claim Source:**
     *   *Claimant:* Harmony Energy
     *   *Asset Energisation Date:* November 2022 (stated on case study page as "energised November 2022")
-    *   *Original URL (Offline / HTTP 404 as of 2026-08-13):* `https://www.harmonyenergy.co.uk/case-studies/pillswood-bess/`
-    *   *Pre-Registered Wayback Archive Snapshot (Active Ground-Truth Anchor, HTTP 200 OK):* [web.archive.org/web/20260707134620/https://www.harmonyenergy.co.uk/case-studies/pillswood-bess/](https://web.archive.org/web/20260707134620/https://www.harmonyenergy.co.uk/case-studies/pillswood-bess/)
+    *   *Canonical Primary Claim URL (Active, HTTP 200 OK as of 2026-08-14):* [https://harmonyenergy.co.uk/case-studies/pillswood-bess/](https://harmonyenergy.co.uk/case-studies/pillswood-bess/)
+    *   *Pre-Registered Wayback Archive Snapshot (Frozen Pre-Registration Anchor, HTTP 200 OK):* [web.archive.org/web/20260707134620/https://harmonyenergy.co.uk/case-studies/pillswood-bess/](https://web.archive.org/web/20260707134620/https://harmonyenergy.co.uk/case-studies/pillswood-bess/)
     *   *Archive Snapshot Timestamp:* `20260707134620` (verified opened HTTP 200 OK containing "98 / 196 (Lithium-ion)" MW / MWH claim)
     *   *Local Evidence Snapshot:*
         ![Pillswood BESS Official Nameplate Capacity Claim (98 MW / 196 MWh)](evidence_claim.png)

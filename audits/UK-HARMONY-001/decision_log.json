@@ -1,7 +1,7 @@
 {
   "claim_id": "UK-HARMONY-001",
   "dataset_version": "12-Month Telemetry (July 2025 - June 2026)",
-  "audit_version": "2.3",
+  "audit_version": "2.4",
   "protocol_version": "P10 v1.1",
   "claimant": "Harmony Energy",
   "trading_agent": "BP Gas Marketing Limited",

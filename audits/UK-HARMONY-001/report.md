@@ -1,5 +1,5 @@
 # P10 Verification Report: Pillswood BESS Grid-Dispatch Audit
-### Report ID: `VM-2026-0002` | Protocol Version: `P10 v1.1` | Document Version: `v2.3`
+### Report ID: `VM-2026-0002` | Protocol Version: `P10 v1.1` | Document Version: `v2.4`
 **Claim ID:** `UK-HARMONY-001` (Pillswood Battery Storage)
 
 ```yaml
@@ -28,8 +28,8 @@ This report presents the P10 verification sequence and final verdicts for the ac
 *   **BM Unit IDs:** `E_PILLB-1` & `E_PILLB-2`
 *   **Verbatim Claim:** 98 MW Export Capacity / 196 MWh Energy Capacity (2-hour duration)
 *   **Asset Energisation Date:** November 2022 (stated on case study page as "energised November 2022")
-*   **Original Claim Source URL:** `https://www.harmonyenergy.co.uk/case-studies/pillswood-bess/` (Offline / HTTP 404 as of 2026-08-13)
-*   **Pre-Registered Wayback Archive Snapshot (Active Ground-Truth Anchor):** [`web.archive.org/web/20260707134620`](https://web.archive.org/web/20260707134620/https://www.harmonyenergy.co.uk/case-studies/pillswood-bess/) (Snapshot Timestamp `20260707134620`, verified opened HTTP 200 OK)
+*   **Canonical Primary Claim URL:** [`https://harmonyenergy.co.uk/case-studies/pillswood-bess/`](https://harmonyenergy.co.uk/case-studies/pillswood-bess/) (Active, HTTP 200 OK as of 2026-08-14)
+*   **Pre-Registered Wayback Archive Snapshot (Frozen Pre-Registration Anchor):** [`web.archive.org/web/20260707134620`](https://web.archive.org/web/20260707134620/https://harmonyenergy.co.uk/case-studies/pillswood-bess/) (Snapshot Timestamp `20260707134620`, verified opened HTTP 200 OK)
 *   **Claim Evidence File:** Local evidence snapshot `evidence_claim.png` pinned in `audits/UK-HARMONY-001/`
 *   **Package License & Scope Notice:** Layered licensing defined in `NOTICE` (CC BY 4.0 for report/findings/charts, MIT License for `reproduce.py`, BSC Public Data Licence for `raw_pillswood_12m.json` and third-party screenshot `evidence_claim.png` excluded from CC BY 4.0 grant; verbatim legal code in `LICENSE`).
 *   **Pre-Registration Timeline:** Falsification/verification rules frozen in commit [`d6458e5`](https://github.com/VolMax-Studio/volmax-gb-bess-audit/commit/d6458e53995f32d3989c98ef2e3cf3426e2e5052) (Wed Jul 8 06:35:29 2026 UTC) prior to acquiring the unseen window telemetry (commit [`237e0c1`](https://github.com/VolMax-Studio/volmax-gb-bess-audit/commit/237e0c1)).

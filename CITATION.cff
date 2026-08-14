@@ -6,7 +6,7 @@ authors:
     orcid: "https://orcid.org/0009-0006-7940-9539"
     affiliation: "VolMax Studio Lab"
 title: "Great Britain BESS Fleet Data-Integrity Screening and Pillswood Grid-Dispatch Capacity Audit (VM-2026-0002)"
-version: "2.3"
+version: "2.4"
 date-released: "2026-08-13"
 url: "https://github.com/VolMax-Studio/volmax-gb-bess-audit"
 repository-code: "https://github.com/VolMax-Studio/volmax-gb-bess-audit"
