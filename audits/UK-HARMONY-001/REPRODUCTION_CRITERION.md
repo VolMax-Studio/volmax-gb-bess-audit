@@ -40,7 +40,7 @@ python3 reproduce.py
 
 ### 3.3 Success Conditions
 Level 1 verification is successful if and only if **all five** of the following conditions are met:
-1. **Cryptographic Manifest Integrity:** `sha256sum -c SHA256SUMS` returns `OK` for all 14 pinned package artifacts.
+1. **Cryptographic Manifest Integrity:** `sha256sum -c SHA256SUMS` returns `OK` for all 15 pinned package artifacts.
 2. **Deterministic Re-creation:** `reproduce.py` completes with exit status `0`.
 3. **Byte-Identity:** The generated `metrics.json` file matches the baseline SHA-256 hash `e141a998d91ef0154fccc047429f476f7ddcd4e78fbc532f35c38f3ca46b3148` (0 numeric diff). The non-deterministic field set for version v2.4 is explicitly empty.
 4. **Primary Metric Identity:** Generated `metrics_12m.json` matches baseline SHA-256 hash `b3958982001b1fb9f3594559a657177a1bf6e7a8079b296cbced68d018c0513a`.
